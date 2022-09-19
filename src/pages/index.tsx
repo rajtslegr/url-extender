@@ -24,7 +24,8 @@ const Home: NextPage = () => {
       setError('');
       setEncodedUrl(`${window.location.origin}/${encodeUrl(inputValue)}`);
     } else {
-      setError('Invalid URL.');
+      setEncodedUrl('');
+      setError('Invalid URL');
     }
   };
 
