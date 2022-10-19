@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const url = decodeUrl(asPath);
-    window.location.href = `https://${url}`;
+    window.location.href = String(url);
   }, [asPath]);
 
   return (
