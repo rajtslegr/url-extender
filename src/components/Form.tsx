@@ -1,7 +1,6 @@
 import { ChangeEventHandler, FormEventHandler } from 'react';
 
-import CopyButton from './button/CopyButton';
-import ExtendButton from './button/ExtendButton';
+import Button from './Button';
 import Error from './Error';
 import Input from './Input';
 
@@ -22,8 +21,10 @@ const Form: React.FC<FormProps> = ({ onSubmit, onChange, onCopy, error }) => (
       <Error>{error}</Error>
     </div>
     <div className="flex w-56 flex-row items-center justify-center space-x-2">
-      <ExtendButton />
-      <CopyButton onCopy={onCopy} />
+      <Button type="submit">Extend</Button>
+      <Button type="button" onCopy={onCopy}>
+        Copy
+      </Button>
     </div>
   </form>
 );
