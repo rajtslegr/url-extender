@@ -11,8 +11,8 @@ const Home: NextPage = () => {
   const { asPath } = useRouter();
 
   useEffect(() => {
-    const url = decodeUrl(asPath);
-    window.location.href = String(url);
+    const url = String(decodeUrl(asPath)).replace('https://', '');
+    window.location.href = `https://${url}`;
   }, [asPath]);
 
   return (
