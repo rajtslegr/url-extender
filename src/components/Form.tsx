@@ -11,7 +11,7 @@ interface FormProps {
   error: string;
 }
 
-const Form: React.FC<FormProps> = ({ onSubmit, onChange, onCopy, error }) => (
+const Form = ({ onSubmit, onChange, onCopy, error }: FormProps) => (
   <form
     onSubmit={onSubmit}
     className="flex w-full flex-col items-center justify-center space-y-4"

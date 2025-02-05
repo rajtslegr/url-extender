@@ -1,8 +1,12 @@
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 
-const Layout: React.FC<PropsWithChildren> = ({ children }) => (
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => (
   <div className="min-h-screen bg-slate-800 pt-12 md:pt-56">
-    <main className="my-8 mx-auto min-h-[calc(100vh-8rem)] max-w-2xl flex-auto px-4">
+    <main className="mx-auto my-8 min-h-[calc(100vh-8rem)] max-w-2xl flex-auto px-4">
       {children}
     </main>
   </div>

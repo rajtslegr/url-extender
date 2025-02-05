@@ -1,6 +1,10 @@
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 
-const Error: React.FC<PropsWithChildren> = ({ children }) => (
+interface ErrorProps {
+  children: ReactNode;
+}
+
+const Error = ({ children }: ErrorProps) => (
   <span className="my-2 h-2 text-sm text-red-500">{children}</span>
 );
 

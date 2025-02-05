@@ -22,7 +22,7 @@ export const decodeUrl = (path: string) => {
   const binary = parsedPath.replaceAll('o', '0').replaceAll('O', '1');
   const yardstick = /.{9}/g;
 
-  const pieces = binary.match(yardstick) || [];
+  const pieces: string[] = binary.match(yardstick) || [];
   const accumulated = pieces.length * 9;
 
   const modulo = binary.length % accumulated;
